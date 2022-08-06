@@ -3887,7 +3887,6 @@ dependencies = [
 name = "node-template-runtime"
 version = "4.0.0-dev"
 dependencies = [
- "best-path",
  "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate.git?branch=polkadot-v0.9.24)",
  "frame-executive",
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate.git?branch=polkadot-v0.9.24)",
@@ -4138,7 +4137,7 @@ dependencies = [
 [[package]]
 name = "pallet-best-path"
 version = "0.1.0"
-source = "git+https://github.com/konrads/pallet-best-path.git?rev=5c7fc23aa110e1391a34299c6d2ef006f7b582e5#5c7fc23aa110e1391a34299c6d2ef006f7b582e5"
+source = "git+https://github.com/konrads/pallet-best-path.git?rev=ad886ced39865d3937693041ab19062a069c1e53#ad886ced39865d3937693041ab19062a069c1e53"
 dependencies = [
  "best-path",
  "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate.git)",
@@ -4187,11 +4186,13 @@ dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate.git?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate.git?branch=polkadot-v0.9.24)",
  "log",
+ "pallet-best-path",
  "parity-scale-codec",
  "scale-info",
  "sp-core 6.0.0 (git+https://github.com/paritytech/substrate.git?branch=polkadot-v0.9.24)",
  "sp-io 6.0.0 (git+https://github.com/paritytech/substrate.git?branch=polkadot-v0.9.24)",
  "sp-runtime 6.0.0 (git+https://github.com/paritytech/substrate.git?branch=polkadot-v0.9.24)",
+ "sp-std 4.0.0 (git+https://github.com/paritytech/substrate.git?branch=polkadot-v0.9.24)",
 ]
 
 [[package]]

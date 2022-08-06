@@ -22,7 +22,6 @@ use sp_std::prelude::*;
 #[cfg(feature = "std")]
 use sp_version::NativeVersion;
 use sp_version::RuntimeVersion;
-use best_path;
 
 // A few exports that help ease life for downstream crates.
 pub use frame_support::{
@@ -291,6 +290,10 @@ impl pallet_preimage::Config for Runtime {
 
 impl pallet_playground::Config for Runtime {
 	type Event = Event;
+	type Currency = Vec<u8>;
+	type Amount = u128;
+	type Provider = pallet_best_path::PriceProviderId;
+	type BestPath = pallet_best_path::Pallet<Runtime>;
 }
 
 parameter_types! {
@@ -334,7 +337,7 @@ impl pallet_best_path::Config for Runtime {
 	type MaxTxPoolStayTime = MaxTxPoolStayTime;
 	type UnsignedPriority = UnsignedPriority;
 	type PriceChangeTolerance = PriceChangeTolerance;
-	type BestPathCalculator = best_path::prelude::floyd_warshall::calculator::FloydWarshallCalculator;
+	type BestPathCalculator = pallet_best_path::best_path::prelude::floyd_warshall::calculator::FloydWarshallCalculator;
 	type PriceProviderHub = pallet_best_path::price_provider::DefaultPriceProviderHub;
 	type Currency = Vec<u8>;
 	type Provider = pallet_best_path::PriceProviderId;
