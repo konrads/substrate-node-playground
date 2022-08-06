@@ -51,6 +51,8 @@ hex-literal = { version = "0.3.4", optional = true }
 
 # third pary pallets
 pallet-scheduler-datetime = { default-features = false, git = "https://github.com/konrads/pallet-scheduler-datetime.git", rev = "f4569280cc6552d0eb20730fad0d2a2addee66d1" }
+pallet-best-path = { default-features = false, git = "https://github.com/konrads/pallet-best-path.git", rev = "5c7fc23aa110e1391a34299c6d2ef006f7b582e5" }
+best-path = { version = '0.1.1', default-features = false, features = ['scale'] }
 
 # Local Dependencies
 pallet-template = { version = "4.0.0-dev", default-features = false, path = "../pallets/template" }
@@ -76,6 +78,8 @@ std = [
 	"pallet-sudo/std",
 	"pallet-template/std",
 	"pallet-timestamp/std",
+	"pallet-scheduler-datetime/std",
+	"pallet-best-path/std",
 	"pallet-transaction-payment-rpc-runtime-api/std",
 	"pallet-transaction-payment/std",
 	"sp-api/std",
@@ -101,6 +105,7 @@ runtime-benchmarks = [
 	"pallet-grandpa/runtime-benchmarks",
 	"pallet-template/runtime-benchmarks",
 	"pallet-timestamp/runtime-benchmarks",
+	"pallet-best-path/runtime-benchmarks",
 	"sp-runtime/runtime-benchmarks",
 ]
 try-runtime = [
