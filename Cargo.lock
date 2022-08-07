@@ -4187,6 +4187,7 @@ dependencies = [
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate.git?branch=polkadot-v0.9.24)",
  "log",
  "pallet-best-path",
+ "pallet-scheduler-datetime",
  "parity-scale-codec",
  "scale-info",
  "sp-core 6.0.0 (git+https://github.com/paritytech/substrate.git?branch=polkadot-v0.9.24)",
@@ -4228,7 +4229,7 @@ dependencies = [
 [[package]]
 name = "pallet-scheduler-datetime"
 version = "0.1.1"
-source = "git+https://github.com/konrads/pallet-scheduler-datetime.git?rev=f4569280cc6552d0eb20730fad0d2a2addee66d1#f4569280cc6552d0eb20730fad0d2a2addee66d1"
+source = "git+https://github.com/konrads/pallet-scheduler-datetime.git?rev=b1517317ecff69295c48925052ea9e4137575d1d#b1517317ecff69295c48925052ea9e4137575d1d"
 dependencies = [
  "chrono-light",
  "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate.git?branch=polkadot-v0.9.24)",

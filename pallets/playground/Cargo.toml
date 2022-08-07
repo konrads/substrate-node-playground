@@ -11,22 +11,26 @@ scale-info =       { version = "2.1.2", default-features = false, features = ["d
 frame-support =    { git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.24", version = "4.0.0-dev", default-features = false }
 frame-system =     { git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.24", version = "4.0.0-dev", default-features = false }
 log =              { version = "0.4.17", default-features = false }
+sp-runtime =       { git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.24", version = "6.0.0", default-features = false }
 pallet-best-path = { git = "https://github.com/konrads/pallet-best-path.git", rev = "ad886ced39865d3937693041ab19062a069c1e53", default-features = false }
+pallet-scheduler-datetime = { git = "https://github.com/konrads/pallet-scheduler-datetime.git", rev = "b1517317ecff69295c48925052ea9e4137575d1d", default-features = false }
 
 [dev-dependencies]
 sp-core =    { git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.24", version = "6.0.0", default-features = false }
 sp-io =      { git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.24", version = "6.0.0", default-features = false }
-sp-runtime = { git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.24", version = "6.0.0", default-features = false }
 
 [features]
 default = ["std"]
 std = [
 	"pallet-best-path/std",
+	"pallet-scheduler-datetime/std",
 	"codec/std",
 	"scale-info/std",
 	"log/std",
 	"sp-std/std",
+	"sp-core/std",
+	# "sp-runtime/std",
 	"frame-system/std",
-	"frame-support/std"
+	"frame-support/std",
 ]
 try-runtime = ["frame-support/try-runtime"]

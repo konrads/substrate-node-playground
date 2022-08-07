@@ -290,10 +290,13 @@ impl pallet_preimage::Config for Runtime {
 
 impl pallet_playground::Config for Runtime {
 	type Event = Event;
+	type Call = Call;
 	type Currency = Vec<u8>;
 	type Amount = u128;
 	type Provider = pallet_best_path::PriceProviderId;
 	type BestPath = pallet_best_path::Pallet<Runtime>;
+	type PalletsOrigin = OriginCaller;
+	type Scheduler = pallet_scheduler_datetime::Pallet<Runtime>;
 }
 
 parameter_types! {

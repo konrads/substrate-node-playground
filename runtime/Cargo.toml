@@ -50,7 +50,7 @@ frame-system-benchmarking = { version = "4.0.0-dev", default-features = false, g
 hex-literal = { version = "0.3.4", optional = true }
 
 # third pary pallets
-pallet-scheduler-datetime = { default-features = false, git = "https://github.com/konrads/pallet-scheduler-datetime.git", rev = "f4569280cc6552d0eb20730fad0d2a2addee66d1" }
+pallet-scheduler-datetime = { default-features = false, git = "https://github.com/konrads/pallet-scheduler-datetime.git", rev = "b1517317ecff69295c48925052ea9e4137575d1d" }
 pallet-best-path = { default-features = false, git = "https://github.com/konrads/pallet-best-path.git", rev = "ad886ced39865d3937693041ab19062a069c1e53" }
 
 # Local Dependencies
@@ -104,7 +104,6 @@ runtime-benchmarks = [
 	"pallet-grandpa/runtime-benchmarks",
 	"pallet-template/runtime-benchmarks",
 	"pallet-timestamp/runtime-benchmarks",
-	"pallet-best-path/runtime-benchmarks",
 	"sp-runtime/runtime-benchmarks",
 ]
 try-runtime = [
