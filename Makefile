@@ -19,7 +19,10 @@ clean:
 clean-node:
 	cargo clean -p node-template
 
-build:
+enforce-nightly-2022-08-10:
+	rustup target add wasm32-unknown-unknown --toolchain nightly-2022-08-10
+
+build: enforce-nightly-2022-08-10
 	cargo build
 
 test:
