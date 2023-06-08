@@ -32,7 +32,8 @@ jobs:
           rustup default stable
           rustup update nightly
           rustup update stable
-          rustup target add wasm32-unknown-unknown --toolchain nightly-2020-10-14
+          rustup install nightly-2022-08-10
+          rustup target add wasm32-unknown-unknown --toolchain nightly-2022-08-10
 
       - name: Check Build
         run: |
