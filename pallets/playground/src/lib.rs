@@ -71,6 +71,9 @@ pub mod pallet {
 		/// Price Pair updated
 		/// parameters. [source, target, price_path]
 		PricePathLookup(T::Currency, T::Currency, Option<best_path::prelude::PricePath<T::Currency, T::Amount, T::Provider>>),
+
+		/// Acknowledgement of version update
+		PostUpdateAck,
 	}
 
 	#[pallet::call]
@@ -123,6 +126,13 @@ pub mod pallet {
 			let price_path = T::BestPath::get_price_path(source.clone(), target.clone());
 			log::info!(target: "runtime::playground", "looked up price {} -> {}: {:?}", source_str, target_str, &price_path);
 			Self::deposit_event(Event::PricePathLookup(source, target, price_path));
+			Ok(())
+		}
+
+		#[pallet::weight(10_000)]
+		pub fn post_update_ack(origin: OriginFor<T>) -> DispatchResult {
+			ensure_signed(origin)?;
+			Self::deposit_event(Event::PostUpdateAck);
 			Ok(())
 		}
 	}
