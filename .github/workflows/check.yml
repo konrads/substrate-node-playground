@@ -42,4 +42,5 @@ jobs:
       - name: Check Build for Benchmarking
         run: >
           pushd node &&
+          rustup target add wasm32-unknown-unknown &&
           cargo check --features=runtime-benchmarks --release
